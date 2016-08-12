@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		831F695E1D5C4E39000AC39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F695D1D5C4E39000AC39B /* AppDelegate.swift */; };
-		831F69601D5C4E39000AC39B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F695F1D5C4E39000AC39B /* ViewController.swift */; };
+		831F69601D5C4E39000AC39B /* ChotenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F695F1D5C4E39000AC39B /* ChotenViewController.swift */; };
 		831F69631D5C4E39000AC39B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831F69611D5C4E39000AC39B /* Main.storyboard */; };
 		831F69651D5C4E39000AC39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831F69641D5C4E39000AC39B /* Assets.xcassets */; };
 		831F69681D5C4E39000AC39B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831F69661D5C4E39000AC39B /* LaunchScreen.storyboard */; };
+		831F69751D5C9868000AC39B /* ChotenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F69741D5C9868000AC39B /* ChotenConfig.swift */; };
+		831F697C1D5CA9BE000AC39B /* UIColor+Choten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F697B1D5CA9BE000AC39B /* UIColor+Choten.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		831F695A1D5C4E38000AC39B /* Choten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Choten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831F695D1D5C4E39000AC39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		831F695F1D5C4E39000AC39B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		831F695F1D5C4E39000AC39B /* ChotenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChotenViewController.swift; sourceTree = "<group>"; };
 		831F69621D5C4E39000AC39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831F69641D5C4E39000AC39B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831F69671D5C4E39000AC39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		831F69691D5C4E39000AC39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831F69741D5C9868000AC39B /* ChotenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChotenConfig.swift; sourceTree = "<group>"; };
+		831F697B1D5CA9BE000AC39B /* UIColor+Choten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Choten.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,87 @@
 			isa = PBXGroup;
 			children = (
 				831F695D1D5C4E39000AC39B /* AppDelegate.swift */,
-				831F695F1D5C4E39000AC39B /* ViewController.swift */,
-				831F69611D5C4E39000AC39B /* Main.storyboard */,
+				831F69781D5C98A4000AC39B /* Helpers */,
+				831F69761D5C9883000AC39B /* Configs */,
+				831F69791D5C98AD000AC39B /* Services */,
+				831F697A1D5C98BB000AC39B /* Extensions */,
+				831F696F1D5C5B54000AC39B /* View */,
+				831F69701D5C5B61000AC39B /* ViewControllers */,
 				831F69641D5C4E39000AC39B /* Assets.xcassets */,
-				831F69661D5C4E39000AC39B /* LaunchScreen.storyboard */,
-				831F69691D5C4E39000AC39B /* Info.plist */,
+				831F69711D5C5B93000AC39B /* Supporting Files */,
+				831F69721D5C5B99000AC39B /* Framework */,
 			);
 			path = Choten;
+			sourceTree = "<group>";
+		};
+		831F696F1D5C5B54000AC39B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		831F69701D5C5B61000AC39B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				831F695F1D5C4E39000AC39B /* ChotenViewController.swift */,
+				831F69731D5C5BC0000AC39B /* Storyboard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		831F69711D5C5B93000AC39B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				831F69691D5C4E39000AC39B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		831F69721D5C5B99000AC39B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		831F69731D5C5BC0000AC39B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				831F69611D5C4E39000AC39B /* Main.storyboard */,
+				831F69661D5C4E39000AC39B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		831F69761D5C9883000AC39B /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				831F69741D5C9868000AC39B /* ChotenConfig.swift */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		831F69781D5C98A4000AC39B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		831F69791D5C98AD000AC39B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		831F697A1D5C98BB000AC39B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				831F697B1D5CA9BE000AC39B /* UIColor+Choten.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831F69601D5C4E39000AC39B /* ViewController.swift in Sources */,
+				831F697C1D5CA9BE000AC39B /* UIColor+Choten.swift in Sources */,
+				831F69751D5C9868000AC39B /* ChotenConfig.swift in Sources */,
+				831F69601D5C4E39000AC39B /* ChotenViewController.swift in Sources */,
 				831F695E1D5C4E39000AC39B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +369,7 @@
 				831F696E1D5C4E39000AC39B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
