@@ -14,6 +14,7 @@
 		831F69681D5C4E39000AC39B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831F69661D5C4E39000AC39B /* LaunchScreen.storyboard */; };
 		831F69751D5C9868000AC39B /* ChotenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F69741D5C9868000AC39B /* ChotenConfig.swift */; };
 		831F697C1D5CA9BE000AC39B /* UIColor+Choten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F697B1D5CA9BE000AC39B /* UIColor+Choten.swift */; };
+		83D9AFBD1D5F7C1200D841E7 /* ChotenDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D9AFBC1D5F7C1200D841E7 /* ChotenDelay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		831F69691D5C4E39000AC39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831F69741D5C9868000AC39B /* ChotenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChotenConfig.swift; sourceTree = "<group>"; };
 		831F697B1D5CA9BE000AC39B /* UIColor+Choten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Choten.swift"; sourceTree = "<group>"; };
+		83D9AFBC1D5F7C1200D841E7 /* ChotenDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChotenDelay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		831F69781D5C98A4000AC39B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				83D9AFBC1D5F7C1200D841E7 /* ChotenDelay.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831F697C1D5CA9BE000AC39B /* UIColor+Choten.swift in Sources */,
+				83D9AFBD1D5F7C1200D841E7 /* ChotenDelay.swift in Sources */,
 				831F69751D5C9868000AC39B /* ChotenConfig.swift in Sources */,
 				831F69601D5C4E39000AC39B /* ChotenViewController.swift in Sources */,
 				831F695E1D5C4E39000AC39B /* AppDelegate.swift in Sources */,

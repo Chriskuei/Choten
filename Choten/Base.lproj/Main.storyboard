@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,8 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-KE-1VS">
+                                <rect key="frame" x="261" y="60" width="78" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Ifk-48-tYB"/>
+                                    <constraint firstAttribute="width" constant="78" id="zTd-Qx-Q5v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JK8-jd-DK8">
-                                <rect key="frame" x="252" y="107" width="97" height="30"/>
+                                <rect key="frame" x="252" y="121" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="edF-jp-QWh"/>
                                     <constraint firstAttribute="height" constant="30" id="gf7-BV-YTX"/>
@@ -28,43 +38,41 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scW-AA-M1Y">
-                                <rect key="frame" x="252" y="137" width="97" height="1"/>
+                                <rect key="frame" x="252" y="151" width="97" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="bao-If-tBm"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI3-tm-78K">
-                                <rect key="frame" x="390" y="100" width="35" height="36"/>
+                                <rect key="frame" x="354" y="123" width="39" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" title="ADD"/>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjN-n8-GXe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-lK-IMS">
-                                <rect key="frame" x="99" y="170" width="403" height="260"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Su-KB-3Tz">
+                                <rect key="frame" x="214" y="123" width="33" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="CLR"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuW-ev-4LP"/>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4g4-aA-1eN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天吃什么呢？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-lK-IMS">
+                                <rect key="frame" x="99" y="184" width="403" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="8d6-DI-puP"/>
+                                    <constraint firstAttribute="height" constant="250" id="8d6-DI-puP"/>
                                     <constraint firstAttribute="width" constant="403" id="cem-Tk-bup"/>
                                 </constraints>
-                                <string key="text">新食堂
-二食堂
-三食堂
-清真食堂 京工食堂
-七食堂</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-KE-1VS">
-                                <rect key="frame" x="261" y="60" width="78" height="31"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwW-vj-DJr" userLabel="Choten Button">
-                                <rect key="frame" x="250" y="460" width="100" height="40"/>
+                                <rect key="frame" x="250" y="480" width="100" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mt-XC-Vqb" userLabel="Choten Button">
                                         <rect key="frame" x="2" y="2" width="96" height="36"/>
@@ -103,26 +111,50 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-e9-qra">
+                                <rect key="frame" x="292" y="407" width="17" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20955899357795715" green="0.27628350257873535" blue="0.34526556730270386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OI3-tm-78K" firstAttribute="leading" secondItem="JK8-jd-DK8" secondAttribute="trailing" constant="5" id="0tj-XM-Mcy"/>
                             <constraint firstItem="zyi-KE-1VS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1XL-DP-arM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PwW-vj-DJr" secondAttribute="bottom" constant="100" id="1xX-CP-moW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PwW-vj-DJr" secondAttribute="bottom" constant="80" id="1xX-CP-moW"/>
+                            <constraint firstItem="JK8-jd-DK8" firstAttribute="leading" secondItem="2Su-KB-3Tz" secondAttribute="trailing" constant="5" id="251-0x-IPf"/>
+                            <constraint firstItem="4Oe-e9-qra" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7dM-3f-AMb"/>
+                            <constraint firstItem="JK8-jd-DK8" firstAttribute="top" secondItem="zyi-KE-1VS" secondAttribute="bottom" constant="30" id="DLT-nP-WBS"/>
                             <constraint firstItem="Uxd-lK-IMS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EAs-pv-gSH"/>
-                            <constraint firstItem="Uxd-lK-IMS" firstAttribute="top" secondItem="OI3-tm-78K" secondAttribute="bottom" constant="34" id="MYX-f1-vS3"/>
+                            <constraint firstItem="scW-AA-M1Y" firstAttribute="top" secondItem="2Su-KB-3Tz" secondAttribute="bottom" constant="-8" id="EJS-wr-jjt"/>
+                            <constraint firstItem="2Su-KB-3Tz" firstAttribute="top" secondItem="JK8-jd-DK8" secondAttribute="bottom" constant="2" id="Lcq-dg-fFf"/>
+                            <constraint firstItem="scW-AA-M1Y" firstAttribute="top" secondItem="OI3-tm-78K" secondAttribute="bottom" constant="-8" id="OQ9-dK-lSI"/>
+                            <constraint firstItem="I7x-UF-UTo" firstAttribute="top" secondItem="4Oe-e9-qra" secondAttribute="bottom" constant="50" id="YK2-8o-HWC"/>
+                            <constraint firstItem="OI3-tm-78K" firstAttribute="bottom" secondItem="JK8-jd-DK8" secondAttribute="bottom" id="ao2-1I-bDx"/>
                             <constraint firstItem="PwW-vj-DJr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cKm-k8-XQx"/>
                             <constraint firstItem="scW-AA-M1Y" firstAttribute="top" secondItem="JK8-jd-DK8" secondAttribute="bottom" id="e1e-0q-ALc"/>
                             <constraint firstItem="JK8-jd-DK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0Y-Ku-1T0"/>
                             <constraint firstItem="Uxd-lK-IMS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gIt-yr-3Tl"/>
-                            <constraint firstItem="OI3-tm-78K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="107" id="gnM-q2-rWl"/>
                             <constraint firstItem="Uxd-lK-IMS" firstAttribute="top" secondItem="JK8-jd-DK8" secondAttribute="bottom" constant="33" id="jIl-J2-lb0"/>
                             <constraint firstItem="zyi-KE-1VS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="nYT-u1-HCf"/>
                             <constraint firstItem="scW-AA-M1Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o4S-Ue-6eL"/>
                             <constraint firstItem="scW-AA-M1Y" firstAttribute="width" secondItem="JK8-jd-DK8" secondAttribute="width" id="saY-lz-aRa"/>
-                            <constraint firstItem="OI3-tm-78K" firstAttribute="baseline" secondItem="JK8-jd-DK8" secondAttribute="baseline" id="yq9-VZ-Kpv"/>
+                            <constraint firstItem="OI3-tm-78K" firstAttribute="leading" secondItem="JK8-jd-DK8" secondAttribute="leading" id="uDa-gx-xei"/>
+                            <constraint firstItem="JK8-jd-DK8" firstAttribute="top" secondItem="OI3-tm-78K" secondAttribute="bottom" id="zn9-1E-ruS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EAs-pv-gSH"/>
+                                <exclude reference="Lcq-dg-fFf"/>
+                                <exclude reference="zn9-1E-ruS"/>
+                                <exclude reference="ao2-1I-bDx"/>
+                                <exclude reference="uDa-gx-xei"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="eatWhatLabel" destination="4Oe-e9-qra" id="hyk-OI-kme"/>
                         <outlet property="itemTextField" destination="JK8-jd-DK8" id="HRk-e1-HfE"/>
                         <outlet property="itemsLabel" destination="Uxd-lK-IMS" id="Upa-hl-ks9"/>
                     </connections>

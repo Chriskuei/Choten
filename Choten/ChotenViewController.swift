@@ -14,7 +14,7 @@ class ChotenViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     @IBOutlet weak var itemsLabel: UILabel!
     @IBOutlet weak var eatWhatLabel: UILabel!
     
-    let items: [String] = ["新食堂", "京工食堂", "七食堂"]
+    var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +39,45 @@ class ChotenViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         itemTextField.resignFirstResponder()
     }
     
+    @IBAction func clearButtonTapped(sender: AnyObject) {
+        items = []
+        itemsLabel.text! = "今天吃什么呢？"
+        eatWhatLabel.text! = "..."
+    }
+    
     @IBAction func addButtonTapped(sender: AnyObject) {
-        itemsLabel.text! += itemTextField.text! + "\n"
-        print(itemsLabel.text!)
-        itemTextField.text! = ""
+        
+        if let choice = itemTextField.text {
+            
+            if itemsLabel.text! == "今天吃什么呢？" {
+                itemsLabel.text! = ""
+            }
+            items.append(choice)
+            itemsLabel.text! += choice + "\n"
+            //print(itemsLabel)
+            print(choice)
+            itemTextField.text! = ""
+        }
+        
     }
     
     @IBAction func okButtonTapped(sender: AnyObject) {
         let index = generateRandomNumber()
         print(items[index])
-        //eatWhatLabel.text! = "你应该去 \(items[index])"
-        //print(eatWhatLabel.text!)
+        
+        delay(0.5) { 
+            self.eatWhatLabel.text! = "正在计算中..."
+            delay(0.5) {
+                self.eatWhatLabel.text! = "客官请稍等..."
+                delay(0.5) {
+                    self.eatWhatLabel.text! = "菜马上出炉..."
+                    delay(0.5) {
+                        self.eatWhatLabel.text! = "你应该去 \(self.items[index])"
+                    }
+                }
+            }
+        }
+        print(eatWhatLabel.text!)
     }
     
     func generateRandomNumber() -> Int {
